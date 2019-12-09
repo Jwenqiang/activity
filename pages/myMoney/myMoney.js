@@ -116,7 +116,7 @@ Page({
       num = 1
     }    
     wx.request({
-      url: 'https://spapi.centaline.com.cn/api/Rotate/GetRotateStartUserAmountPageList',
+      url: 'https://spapi.centaline.com.cn/SPXinFangApi/Rotate/GetRotateStartUserAmountPageList',
       header: {
         "token": that.data.utoken
       },

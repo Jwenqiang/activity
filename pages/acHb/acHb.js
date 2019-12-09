@@ -142,7 +142,7 @@ Page({
   getUser(){
     var that=this;
     wx.request({
-      url: 'https://spapi.centaline.com.cn/api/Users/GetUser',
+      url: 'https://spapi.centaline.com.cn/SPXinFangApi/Users/GetUser',
       header:{
         'token':that.data.utoken
       },
@@ -168,7 +168,7 @@ Page({
     });
     var that=this;
     wx.request({
-      url: 'https://spapi.centaline.com.cn/api/Rotate/GetWxQRcode',
+      url: 'https://spapi.centaline.com.cn/SPXinFangApi/Rotate/GetWxQRcode',
       method:"post",
       data:{
         scene: 'Id=' + that.data.activeId + "," + that.data.oneId + "," + that.data.secondId +",3",

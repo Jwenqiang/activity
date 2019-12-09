@@ -1,6 +1,6 @@
 @import "../index/index.wxss";
 page .page{background: #f3f4f8;}
-.top{height: 220rpx;padding: 40rpx 40rpx 34rpx;color: #fff;box-sizing: border-box;}
+.top{height: 220rpx;padding: 40rpx 40rpx 34rpx;color: #fff;box-sizing: border-box;margin-bottom: 0}
 image.mbj{width: 100%;height: 220rpx;position: absolute;left: 0;top: 0;z-index: 1}
 .msg{position: relative;z-index: 2}
 .topA,.topB{z-index: 2}
@@ -39,7 +39,23 @@ button.li::after{border: 0}
 .showMsg{padding-top: 60rpx;top: 25%}
 .mstip{text-align: center;font-size: 30rpx}
 
-.saleList{padding: 40rpx 0 20rpx 82rpx;box-sizing: border-box;}
+.saleList{padding: 40rpx 40rpx 0rpx;box-sizing: border-box;}
 .asl-mt{text-decoration: none}
-.asl-li{box-shadow: 0 0 4px #ccc}
+.asl-li{box-shadow: 0 2px 4px #ccc;width: 670rpx;height: 180rpx;padding: 0;margin-bottom: 30rpx;}
+.asl-l{width: 248rpx;margin: 0}
+.ty{padding-top: 30rpx;font-size: 28rpx;color: #fff}
+.ty label{font-size: 58rpx;font-weight: bold}
+.tym{padding-top: 40rpx;box-sizing: border-box;text-align: left;padding-left: 20rpx;width: 422rpx}
+.tymName{color: #333;font-weight: bold;margin-bottom: 20rpx}
+.tymTip{font-size: 22rpx;color: #666}
+.tyBtn{width: 100rpx;height: 40rpx;position: absolute;bottom: 20rpx;right: 20rpx;font-size: 22rpx;text-align: center;border: 2rpx solid #999;line-height:40rpx;border-radius: 28rpx;color: #999 }
+image.tyTag{width: 88rpx;height: 69rpx;position: absolute;right: 0;top: -1rpx}
+image.tyIcon{width: 177rpx;height: 92rpx;position: absolute;right: 20rpx;bottom: 20rpx}
+.asl-lp{color: #fff;}
+.lpl{padding-top: 30rpx}
+.lpm{width: 422rpx;padding: 30rpx 0 0 20rpx;text-align: left;box-sizing: border-box}
+.lpmName{margin-bottom: 4rpx}
+.lpmAdr{font-size: 22rpx;color: #999;margin-bottom: 10rpx}
+.lpmAdr .iconfont{font-size: 20rpx;margin-left: 4rpx}
+
 

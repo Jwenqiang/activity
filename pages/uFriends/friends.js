@@ -116,7 +116,7 @@ Page({
       num = 1
     }    
     wx.request({
-      url: 'https://spapi.centaline.com.cn/api/Rotate/GetRotateUserClickList',
+      url: 'https://spapi.centaline.com.cn/SPXinFangApi/Rotate/GetRotateUserClickList',
       method:"post",
       data: {
         RotateId: Number(that.data.activeId),

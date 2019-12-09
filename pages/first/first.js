@@ -246,7 +246,7 @@ Page({
         //   wxcode: res.code
         // })
         wx.request({
-          url: 'https://spapi.centaline.com.cn/api/Users/UserLogin', //接口地址
+          url: 'https://spapi.centaline.com.cn/SPXinFangApi/Users/UserLogin', //接口地址
           data: {
             code: res.code,
             encryptedData: telObj,

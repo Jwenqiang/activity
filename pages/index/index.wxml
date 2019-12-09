@@ -1,6 +1,9 @@
 <wxs module="filter" src="../fun.wxs"></wxs>
 <view class="page">
   <view class="asl-top" style="background: #ff3c00 url('https://hfugweb.centaline.com.cn/img/smallR/discount/aban.png') left top no-repeat;background-size:100%">
+    <image src="../../img/logo.png" class="logo"></image>
+    <image src="../../img/title.png" class="title"></image>
+    <image src="../../img/awt.png" class="awt"></image>
   </view>
   <view class="outer asl-mid">
     <view class="asl-sale" style="background:url('https://hfugweb.centaline.com.cn/img/smallR/discount/asale.png') left top no-repeat;background-size:100%">
@@ -8,9 +11,9 @@
       <view class="sale-tip">最高可抽取到<label>{{bzHouse.MaxReward}}万元</label></view>
     </view>
     <!-- 未授权状态 -->
-    <button class="aslm-btn" style="background:url('https://hfugweb.centaline.com.cn/img/smallR/discount/abtn.png') left top no-repeat;background-size:100%" open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber1" catchtap="getCode" data-aid="{{bzHouse.Id}}" data-id="0" data-t="0" data-c="{{maxNum}}" wx:if="{{mobile==''||mobile==null}}"></button>
+    <button class="aslm-btn" style="background:url('https://hfugweb.centaline.com.cn/img/smallR/discount/abtn.png') left top no-repeat;background-size:100%" open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber1" catchtap="getCode" data-aid="{{bzHouse.Id}}" data-id="0" data-t="0" data-c="{{maxNum}}" wx:if="{{mobile==''||mobile==null}}">立即领取</button>
     <!-- 已授权状态 -->
-    <button class="aslm-btn" style="background:url('https://hfugweb.centaline.com.cn/img/smallR/discount/abtn.png') left top no-repeat;background-size:100%" data-aid="{{bzHouse.Id}}" data-id="0" data-t="0" data-c="{{maxNum}}" catchtap="getSale" wx:else></button>
+    <button class="aslm-btn" style="background:url('https://hfugweb.centaline.com.cn/img/smallR/discount/abtn.png') left top no-repeat;background-size:100%" data-aid="{{bzHouse.Id}}" data-id="0" data-t="0" data-c="{{maxNum}}" catchtap="getSale" wx:else>立即领取</button>
   </view>
   <view class="asl-djs">
        <view class="time">
@@ -242,7 +245,8 @@
         <image src="../../img/i-asale.png" class="isale"></image>
         <view class="h2 saleH2">成功领取楼盘优惠</view>
         <view class="saleMsg">
-          您已成功领取了该楼盘优惠，我们会尽快联系您！
+         活动即将到期,请尽快与现场工作人员或拨打下方客服电话核对<text style="color:#ff0000">券码</text>(请于“个人中心-优惠券”查看)
+买房咨询热线： 4000 666 030 转 295
         </view>
         <view class="btnSale" bindtap='showSale'>我知道了</view>
       </view>

@@ -70,7 +70,9 @@ Page({
           })
           setTimeout(function () {
             that.getUser();
-            that.getData();
+            setTimeout(function (){
+              that.getData()
+            },10)
           }, 100)
         }
       },
@@ -122,7 +124,7 @@ Page({
     }else{
       console.log(1)
       wx.request({
-        url: 'https://spapi.centaline.com.cn/api/Users/UpdateMobileDisplayBl',
+        url: 'https://spapi.centaline.com.cn/SPXinFangApi/Users/UpdateMobileDisplayBl',
         method: "post",
         header: {
           "token": that.data.utoken
@@ -155,7 +157,7 @@ Page({
       icon:"none"
     })
     wx.request({
-      url: 'https://spapi.centaline.com.cn/api/Users/UpdateMobileDisplayBl',
+      url: 'https://spapi.centaline.com.cn/SPXinFangApi/Users/UpdateMobileDisplayBl',
       method:"post",
       header:{
         "token":that.data.utoken
@@ -249,7 +251,7 @@ Page({
         mask: true
       })   
           wx.request({
-            url: 'https://spapi.centaline.com.cn/api/Users/UserLogin', //接口地址
+            url: 'https://spapi.centaline.com.cn/SPXinFangApi/Users/UserLogin', //接口地址
             data: {
               code: that.data.wxcode,
               encryptedData: telObj,
@@ -263,10 +265,12 @@ Page({
               if (res.data.code == 1001) {
                 that.setData({
                   utoken: res.data.data.Token,  
-                  uid: res.data.data.UserId
+                  uid: res.data.data.UserId,
+                  mobile: res.data.data.Mobile
                 })
                 setTimeout(function(){
                   that.getUser();
+                  that.getData();
                 },100)
                 
               }
@@ -300,7 +304,7 @@ Page({
   getUser() {
     var that = this;
     wx.request({
-      url: 'https://spapi.centaline.com.cn/api/Users/GetUser',
+      url: 'https://spapi.centaline.com.cn/SPXinFangApi/Users/GetUser',
       data: { UserId: that.data.uid },
       header: {
         'token': that.data.utoken
@@ -358,9 +362,12 @@ Page({
     })
   }, 
   getData(){
+    wx.showLoading({
+      title: '',
+    })
     var that=this
     wx.request({
-      url: 'https://spapi.centaline.com.cn/api/Discount/GetDiscountReceiveList',
+      url: 'https://spapi.centaline.com.cn/SPXinFangApi/Discount/GetDiscountReceiveList',
       data: { Mobile: that.data.mobile, PageSize:1000 },
       success(r){
         console.log(r)
@@ -369,6 +376,7 @@ Page({
             list:r.data.data.DataList
           })
         }
+        wx.hideLoading()
       }  
     }) 
   } 

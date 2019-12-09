@@ -123,7 +123,7 @@ Page({
       })
     }else{
       wx.request({
-        url: 'https://spapi.centaline.com.cn/api/Users/UpdateNickName',
+        url: 'https://spapi.centaline.com.cn/SPXinFangApi/Users/UpdateNickName',
         header: { token: that.data.utoken },
         method: "post",
         data: { NickName: newName },
@@ -167,7 +167,7 @@ Page({
           success: r => { //成功的回调
             var baseUrl='data:image/jpg;base64,' + r.data;
             wx.request({
-              url: 'https://spapi.centaline.com.cn/api/System/PostImgByBase64',
+              url: 'https://spapi.centaline.com.cn/SPXinFangApi/System/PostImgByBase64',
               method:"post",
               data:{
                 ImgBase64: baseUrl,
@@ -177,7 +177,7 @@ Page({
                 if(r.data.code==1001){
                   var newImg = r.data.message;
                   wx.request({
-                    url: 'https://spapi.centaline.com.cn/api/Users/UpdateHeadImg',
+                    url: 'https://spapi.centaline.com.cn/SPXinFangApi/Users/UpdateHeadImg',
                     header: { token: that.data.utoken },
                     method:"post",
                     data: { HeadImg:r.data.message},
@@ -257,7 +257,7 @@ Page({
   getUser() {
     var that = this;
     wx.request({
-      url: 'https://spapi.centaline.com.cn/api/Users/GetUser',
+      url: 'https://spapi.centaline.com.cn/SPXinFangApi/Users/GetUser',
       data: { UserId: that.data.uid },
       header: {
         'token': that.data.utoken

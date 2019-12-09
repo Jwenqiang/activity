@@ -151,7 +151,7 @@ Page({
         title: '认证中',
       })      
       wx.request({
-        url: 'https://spapi.centaline.com.cn/api/Users/UserIsAgentrz',
+        url: 'https://spapi.centaline.com.cn/SPXinFangApi/Users/UserIsAgentrz',
         method:"post",
         header:{
           "token":that.data.utoken
@@ -202,7 +202,7 @@ Page({
       icon:"none"
     })
     wx.request({
-      url: 'https://spapi.centaline.com.cn/api/Users/GetUser',
+      url: 'https://spapi.centaline.com.cn/SPXinFangApi/Users/GetUser',
       data: { UserId: that.data.uid },
       header: {
         'token': that.data.utoken
@@ -258,7 +258,7 @@ Page({
   getData() {
     var that = this;
     wx.request({
-      url: 'https://spapi.centaline.com.cn/api/System/GetSystemConfigByKey',
+      url: 'https://spapi.centaline.com.cn/SPXinFangApi/System/GetSystemConfigByKey',
       data: { Key: 2 },
       success: res => {
         console.log(res);
@@ -319,7 +319,7 @@ Page({
 
         var baseUrl = 'data:image/jpg;base64,' + r.data;
         wx.request({
-          url: 'https://spapi.centaline.com.cn/api/System/PostImgByBase64',
+          url: 'https://spapi.centaline.com.cn/SPXinFangApi/System/PostImgByBase64',
           method: "post",
           data: {
             ImgBase64: baseUrl

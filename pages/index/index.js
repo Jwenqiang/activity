@@ -168,7 +168,7 @@ Page({
     var that=this;
     return new Promise(function (resolve) {
       wx.request({
-        url: 'https://spapi.centaline.com.cn/api/Discount/GetSearchGetTop1',
+        url: 'https://spapi.centaline.com.cn/SPXinFangApi/Discount/GetSearchGetTop1',
         success(res) {
           console.log(res);
           if (res.data.code == 1001) {
@@ -419,7 +419,7 @@ Page({
           mask: true
         })
         wx.request({
-          url: 'https://spapi.centaline.com.cn/api/Users/UserLogin', //接口地址
+          url: 'https://spapi.centaline.com.cn/SPXinFangApi/Users/UserLogin', //接口地址
           data: {
             code: that.data.wxcode,
             encryptedData: telObj,
@@ -443,7 +443,7 @@ Page({
               })
               // 授权手机后直接领取优惠
               wx.request({
-                url: 'https://spapi.centaline.com.cn/api/Rotate/AddRotateProjectDiscount',
+                url: 'https://spapi.centaline.com.cn/SPXinFangApi/Rotate/AddRotateProjectDiscount',
                 method: "post",
                 data: {
                   DiscountId: activeId,
@@ -458,6 +458,11 @@ Page({
                       wx.hideLoading();
                       that.showSale()
                     }, 500)
+                  } else if (r.data.code == 1101) {
+                    wx.showToast({
+                      title: "您已领取过该优惠~",
+                      icon: "none"
+                    })
                   } else {
                     wx.showToast({
                       title: "网络异常，请稍后再试",
@@ -493,7 +498,7 @@ Page({
     var discountType = e.currentTarget.dataset.t;
     var discountContent = e.currentTarget.dataset.c;
     wx.request({
-      url: 'https://spapi.centaline.com.cn/api/Discount/AddDiscountReceive',
+      url: 'https://spapi.centaline.com.cn/SPXinFangApi/Discount/AddDiscountReceive',
       method: "post",
       data: {
         DiscountId: activeId,
@@ -510,6 +515,11 @@ Page({
             that.showSale()
           }, 500)
 
+        } else if (r.data.code == 1101) {
+          wx.showToast({
+            title: "您已领取过该优惠~",
+            icon: "none"
+          })
         } else {
           wx.showToast({
             title: "网络异常，请稍后再试",
@@ -617,7 +627,7 @@ Page({
         title: '提交中',
       })
       wx.request({
-        url: 'https://spapi.centaline.com.cn/api/Rotate/AddRotateEnroll',
+        url: 'https://spapi.centaline.com.cn/SPXinFangApi/Rotate/AddRotateEnroll',
         method: "post",
         data: {
           RotateId: that.data.activeId,

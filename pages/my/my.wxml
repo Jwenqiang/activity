@@ -35,33 +35,117 @@ module.exports.toHide = toHide;
     </view>
   </view>
   <view class="saleList" wx:if="{{hasNum}}">
-
-    <view class="outer asl-li" wx:for="{{list}}" wx:key="{{item.Id}}" style="background:url('https://hfugweb.centaline.com.cn/img/smallR/discount/alist.png') left top no-repeat;background-size:100%">
-      <view class="asl-l">
+<block  wx:for="{{list}}" wx:key="{{item.Id}}" wx:if="{{item.ParentId==0}}">
+    <!-- 通用卷 已使用 -->  
+    <view class="outer asl-li" wx:if="{{item.UseState==2}}">
+      <view class="asl-l ty" style="background: url('https://hfugweb.centaline.com.cn/img/smallR/discount/mty0.png') left top no-repeat;background-size:100%">
+        <view>￥<label>{{item.DiscountContent}}</label></view>
+        <text>购房通用卷</text>         
+      </view>
+      <view class="asl-m tym">
+        <view class="tymName">{{item.DiscountTitle}}<text style="font-size:24rpx;color:#f82747">(券码:{{item.DiscountCode}})</text></view>
+        <text class="tymTip">截止时间：{{item.EndTime}}</text>
+        <image src="../../img/mysy0.png" class="tyTag"></image>
+        <image src="../../img/i-ysy.png" class="tyIcon"></image>
+      </view>
+    </view>
+    <!-- 通用卷 未使用 -->
+    <view class="outer asl-li" wx:if="{{item.UseState==1}}">
+      <view class="asl-l ty" style="background: url('https://hfugweb.centaline.com.cn/img/smallR/discount/mty1.png') left top no-repeat;background-size:100%">
+        <view>￥<label>{{item.DiscountContent}}</label></view>
+        <text>购房通用卷</text>         
+      </view>
+      <view class="asl-m tym">
+        <view class="tymName">{{item.DiscountTitle}}<text style="font-size:22rpx;color:#f82747">(券码:{{item.DiscountCode}})</text></view>
+        <text class="tymTip">截止时间：{{item.EndTime}}</text>
+        <view class="tyBtn" style="color:#ff385d;border-color:#ff385d">未使用</view>
+        <image src="../../img/mysy1.png" class="tyTag"></image>
+      </view>
+    </view>  
+    <!-- 通用卷 已失效 -->
+    <view class="outer asl-li" wx:if="{{item.UseState==3}}">
+      <view class="asl-l ty" style="background: url('https://hfugweb.centaline.com.cn/img/smallR/discount/mty0.png') left top no-repeat;background-size:100%">
+        <view>￥<label>{{item.DiscountContent}}</label></view>
+        <text>购房通用卷</text>         
+      </view>
+      <view class="asl-m tym">
+        <view class="tymName">{{item.DiscountTitle}}<text style="font-size:22rpx;color:#f82747">(券码:{{item.DiscountCode}})</text></view>
+        <text class="tymTip">截止时间：{{item.EndTime}}</text>
+        <view class="tyBtn">已失效</view>
+      </view>
+    </view> 
+</block>        
+<block wx:for="{{list}}" wx:key="{{item.Id}}" wx:if="{{item.ParentId>0}}">
+    <!-- 楼盘卷 已使用-->
+    <view class="outer asl-li" wx:if="{{UseState==2}}">
+      <view class="asl-l lpl" style="background: url('https://hfugweb.centaline.com.cn/img/smallR/discount/mjl0.png') left top no-repeat;background-size:100%">
       <block wx:if="{{item.DiscountType==1}}">
       <view style="height:100%;padding:0 20rpx">
-        <image src="../../img/asl-zj.png" class="asl-zj"></image>
-        <text class="asl-lp">{{item.DiscountContent}}万</text>
+        <image src="../../img/m-zj.png" class="asl-zj"></image>
+        <text class="asl-lp asl-izj">{{item.DiscountContent}}万</text>
       </view>   
       </block> 
       <block wx:if="{{item.DiscountType==2}}">
       <view style="height:100%;line-height:140rpx">
         <text class="asl-lp">{{item.DiscountContent}}</text>
-        <image src="../../img/asl-z.png" class="asl-z"></image>   
+        <image src="../../img/m-z.png" class="asl-z"></image>   
       </view>       
       </block>         
       </view>
-      <view class="asl-m">
-        <view class="asl-mt">{{item.ProjectName}}</view>
-        <view class="asl-adr">{{item.Address}}<text class="iconfont icon-location"></text></view>
-        <view class="asl-tip">买房津贴券</view>
+      <view class="asl-m lpm">
+        <view class="tymName lpmName">{{item.ProjectName}}<text style="font-size:22rpx;color:#f82747">(券码:{{item.DiscountCode}})</text></view>
+        <view class="lpmAdr">{{item.Address}}<text class="iconfont icon-location"></text></view>
+        <text class="tymTip">截止时间：{{item.EndTime}}</text>
+        <image src="../../img/i-ysy.png" class="tyIcon"></image>
       </view>
-      <view class="asl-r">
-          <button>
-            马上使用
-          </button>  
+    </view> 
+    <!-- 楼盘卷 未使用-->
+    <view class="outer asl-li" wx:if="{{item.UseState==1}}">
+      <view class="asl-l lpl" style="background: url('https://hfugweb.centaline.com.cn/img/smallR/discount/mj1.png') left top no-repeat;background-size:100%">
+      <block wx:if="{{item.DiscountType==1}}">
+      <view style="height:100%;padding:0 20rpx">
+        <image src="../../img/m-zj.png" class="asl-zj"></image>
+        <text class="asl-lp asl-izj">{{item.DiscountContent}}万</text>
+      </view>   
+      </block> 
+      <block wx:if="{{item.DiscountType==2}}">
+      <view style="height:100%;line-height:140rpx">
+        <text class="asl-lp">{{item.DiscountContent}}</text>
+        <image src="../../img/m-z.png" class="asl-z"></image>   
+      </view>       
+      </block>         
+      </view>
+      <view class="asl-m lpm">
+        <view class="tymName lpmName">{{item.ProjectName}}<text style="font-size:22rpx;color:#f82747">(券码:{{item.DiscountCode}})</text></view>
+        <view class="lpmAdr">{{item.Address}}<text class="iconfont icon-location"></text></view>
+        <text class="tymTip">截止时间：{{item.EndTime}}</text>
+        <view class="tyBtn" style="color:#fe7232;border-color:#fe7232">未使用</view>
       </view>
     </view>
+    <!-- 楼盘卷 已失效-->
+    <view class="outer asl-li" wx:if="{{item.UseState==3}}">
+      <view class="asl-l lpl" style="background: url('https://hfugweb.centaline.com.cn/img/smallR/discount/mjl0.png') left top no-repeat;background-size:100%">
+      <block wx:if="{{item.DiscountType==1}}">
+      <view style="height:100%;padding:0 20rpx">
+        <image src="../../img/m-zj.png" class="asl-zj"></image>
+        <text class="asl-lp asl-izj">{{item.DiscountContent}}万</text>
+      </view>   
+      </block> 
+      <block wx:if="{{item.DiscountType==2}}">
+      <view style="height:100%;line-height:140rpx">
+        <text class="asl-lp">{{item.DiscountContent}}</text>
+        <image src="../../img/m-z.png" class="asl-z"></image>   
+      </view>       
+      </block>         
+      </view>
+      <view class="asl-m lpm">
+        <view class="tymName lpmName">{{item.ProjectName}}<text style="font-size:22rpx;color:#f82747">(券码:{{item.DiscountCode}})</text></view>
+        <view class="lpmAdr">{{item.Address}}<text class="iconfont icon-location"></text></view>
+        <text class="tymTip">截止时间：{{item.EndTime}}</text>
+        <view class="tyBtn">已失效</view>
+      </view>
+    </view>    
+</block>
 
 
   </view>  

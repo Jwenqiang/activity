@@ -115,7 +115,7 @@ Page({
       num = 1
     }    
     wx.request({
-      url: 'https://spapi.centaline.com.cn/api/Rotate/GetRotateEnrollPageList',
+      url: 'https://spapi.centaline.com.cn/SPXinFangApi/Rotate/GetRotateEnrollPageList',
       header: {
         "token": that.data.utoken
       },

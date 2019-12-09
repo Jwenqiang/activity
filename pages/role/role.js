@@ -74,7 +74,7 @@ Page({
   getData(){
     var that=this;
     wx.request({
-      url: 'https://spapi.centaline.com.cn/api/System/GetSystemConfigByKey',
+      url: 'https://spapi.centaline.com.cn/SPXinFangApi/System/GetSystemConfigByKey',
       data: { Key:2},
       success:res=>{
         console.log(res);

@@ -740,7 +740,7 @@ that.setData({
         })
         
         wx.request({
-          url: 'https://spapi.centaline.com.cn/api/Users/UserLogin', //接口地址
+          url: 'https://spapi.centaline.com.cn/SPXinFangApi/Users/UserLogin', //接口地址
           data: {
             code: that.data.wxcode,
             encryptedData: telObj,
@@ -805,7 +805,7 @@ that.setData({
           mask: true
         })     
         wx.request({
-          url: 'https://spapi.centaline.com.cn/api/Users/UserLogin', //接口地址
+          url: 'https://spapi.centaline.com.cn/SPXinFangApi/Users/UserLogin', //接口地址
           data: {
             code: that.data.wxcode,
             encryptedData: telObj,
@@ -861,7 +861,7 @@ that.setData({
           mask: true
         })
         wx.request({
-          url: 'https://spapi.centaline.com.cn/api/Users/UserLogin', //接口地址
+          url: 'https://spapi.centaline.com.cn/SPXinFangApi/Users/UserLogin', //接口地址
           data: {
             code: that.data.wxcode,
             encryptedData: telObj,
@@ -882,7 +882,7 @@ that.setData({
               })
               console.log(that.data.mobile);
               wx.request({
-                url: 'https://spapi.centaline.com.cn/api/Rotate/AddRotateProjectDiscount',
+                url: 'https://spapi.centaline.com.cn/SPXinFangApi/Rotate/AddRotateProjectDiscount',
                 method:"post",
                 data:{
                   RotateId:that.data.activeId,
@@ -930,7 +930,7 @@ that.setData({
     var discountType = e.currentTarget.dataset.t;
     var discountContent = e.currentTarget.dataset.c;  
     wx.request({
-      url: 'https://spapi.centaline.com.cn/api/Rotate/AddRotateProjectDiscount',
+      url: 'https://spapi.centaline.com.cn/SPXinFangApi/Rotate/AddRotateProjectDiscount',
       method: "post",
       data: {
         RotateId: that.data.activeId,
@@ -1034,7 +1034,7 @@ that.setData({
     console.log(that.data.secondId);
     return new Promise(function(resolve){
     wx.request({
-      url: 'https://spapi.centaline.com.cn/api/Rotate/GetRotateById',
+      url: 'https://spapi.centaline.com.cn/SPXinFangApi/Rotate/GetRotateById',
       method:"post",
       data:{
         Id:that.data.activeId,
@@ -1217,7 +1217,7 @@ that.setData({
     var that=this;
     var num=e.currentTarget.dataset.num;
     wx.request({
-      url: 'https://spapi.centaline.com.cn/api/Rotate/AddRotateStartUserAmount',
+      url: 'https://spapi.centaline.com.cn/SPXinFangApi/Rotate/AddRotateStartUserAmount',
       method: "post",
       data: {
         RotateId: that.data.activeId,
@@ -1367,7 +1367,7 @@ that.setData({
         title: '提交中',
       })
       wx.request({
-        url: 'https://spapi.centaline.com.cn/api/Rotate/AddRotateEnroll',
+        url: 'https://spapi.centaline.com.cn/SPXinFangApi/Rotate/AddRotateEnroll',
         method:"post",
         data:{
           RotateId:that.data.activeId,
