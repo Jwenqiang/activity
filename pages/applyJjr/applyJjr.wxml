@@ -1,0 +1,84 @@
+<navbar page-name="经纪人认证"></navbar>
+<view class="htop" style='height:{{navH}}px'></view>
+<view class="page">
+  <view class="outer top">
+    <label class="tx"><image src="/img/tx3.png" wx:if="{{userTx==''||userTx==null}}"></image><image src="{{userTx}}" wx:else></image></label>
+    <view class="name">
+      <label wx:if="{{userName==''||userName==null}}"><text class="nick">转转用户</text><image src="/img/icon-rz.png" class="rz" wx:if="{{role==5}}"></image></label>
+      <label wx:else><text class="nick">{{userName}}</text><image src="/img/icon-rz.png" class="rz" wx:if="{{role==5}}"></image></label>
+      <text wx:if="{{role!=5}}">暂未升级为经纪人</text>
+      <view wx:else>
+        <text>您已升级为经纪人</text>
+      </view>
+    </view>
+  </view>
+  <view class="hr20"></view>
+  <view class="content">
+    <view class="red tip">提示：请务必提交真实信息，平台会进行核实，如有发现虚假信息，会采取封号操作！</view>
+    <view>
+      <view class='outer hInp'>
+         <label class="red" style="float:left">*</label><text>您的姓名</text>
+          <input type='text' placeholder='请填写您的姓名' style='float:right' bindblur='setMsg' data-t="name" placeholder-class="inputTip" value="{{name}}"></input>
+      </view>
+      <view class='outer hInp'>
+         <label class="red" style="float:left">*</label><text>手机号</text>
+          <input type='digit' disabled style='float:right' value='{{mobile}}'placeholder-class="inputTip"></input>
+      </view>  
+      <view class='outer hInp'>
+         <label class="red" style="float:left">*</label><text>所在公司</text>
+          <input type='text'  placeholder='请填写您所在公司' style='float:right'  bindblur='setMsg' data-t="gs" placeholder-class="inputTip" value="{{gs}}"></input>
+      </view> 
+      <view class='outer hInp'>
+         <text>所在门店</text>
+          <input type='text'  placeholder='请填写您所在门店' style='float:right'  bindblur='setMsg' data-t="md" placeholder-class="inputTip" value="{{md}}"></input>
+      </view> 
+      <view class='outer hInp'>
+         <text>岗位职称</text>
+          <input type='text'  placeholder='请填写您的岗位职称' style='float:right'  bindblur='setMsg' data-t="gw" placeholder-class="inputTip" value="{{gw}}"></input>
+      </view> 
+  <view class='hr20'></view>
+  <view class='uploadAll'>
+    <view class='title'><label>上传微信二维码</label></view> 
+    <view class='upload'>
+      <label bindtap='selectPic' wx:if="{{fmPic==''||fmPic==null}}">
+        <text style='display:block;margin:20rpx 0 10rpx'>+</text>
+        <text style='display:block;'>二维码</text>
+      </label>
+      <label class='imgS' wx:else>
+        <image src="{{fmPic}}" mode='aspectFill' bindtap="handleImagePreview"></image>
+          <text class='iconfont icon-guanbi' bindtap="removeImage"></text>
+      </label>     
+    </view>   
+  </view>
+
+      <view class="ok">
+        <button class="btn" bindtap="rz" wx:if="{{role!=5}}">立即成为经纪人</button>   
+        <button class="btn" bindtap="rz" wx:else>重新提交认证</button>   
+      </view> 
+      <view class="hr20"></view>
+      <view class="qxTip">
+        <view class="h2">经纪人权限</view>
+        <view class="qxMsg">
+          <rich-text nodes="{{msg}}"></rich-text>
+        </view>
+      </view>                 
+    </view>
+  </view>
+
+
+
+<!-- 弹窗 -->
+<!-- <view class="show" wx:if="{{show}}">
+  <view class="bj"></view>
+  <view class="showMsg">
+    <view class="h3">声明</view>
+    <view class="mstip">该功能是针对专业房产经纪人开放，是经纪人重要的获客方法。如果您非专业房产经纪人，升级后可能会造成您个人手机号的泄露！</view>
+    <view class="showBtn">
+      <button bindtap="cancel">取消</button>
+      <button bindtap="confim">确定</button>
+    </view>
+  </view>
+</view> -->
+
+
+</view>

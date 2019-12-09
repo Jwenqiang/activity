@@ -1,0 +1,31 @@
+.page{padding-bottom: 80rpx}
+.top{  background: -webkit-linear-gradient(#f74f75,#fe705b);
+  background: -o-linear-gradient(#f74f75,#fe705b);
+  background: -moz-linear-gradient(#f74f75,#fe705b);
+  background: linear-gradient(#f74f75,#fe705b);
+  height: 240rpx;width: 100%;padding: 40rpx 0;box-sizing: border-box;color: #fff}
+.li{width: 33.3%;float: left;text-align: center}
+.li label{display: block;margin-bottom: 30rpx;font-size: 44rpx;font-weight: bold}
+
+
+.list{padding: 40rpx;}
+.section{background: #fff;margin-bottom: 30rpx;box-shadow: 0 0 24rpx #ededed;border-radius: 10rpx;}
+.sect{padding: 0 20rpx;height: 100rpx;line-height: 100rpx;font-size: 28rpx;font-weight: bold;color: #999;border-bottom: 1px solid #f5f5f7}
+.secb{padding: 40rpx 20rpx;box-sizing: border-box;}
+.secb image{width: 200rpx;height: 130rpx;float: left;margin-right: 30rpx;border-radius: 4rpx}
+.hifMsg .name{
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;  
+    font-weight: bold
+}
+.secb{border-bottom: 1px solid #f5f5f7;height: 200rpx}
+.hifT{margin-top: 20rpx;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;color: #999;font-size: 24rpx;}
+.hifT label{margin-right: 20rpx}
+.nohas{color: #ff6666}
+.has{color: #099}
+.secf{padding: 20rpx;}
+.secf label{display: block;color: #999;font-size: 22rpx;margin-bottom: 16rpx;}
+.secf label:last-child{margin-bottom: 0}

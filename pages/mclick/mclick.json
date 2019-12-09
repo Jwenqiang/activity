@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navbar": "../../component/navbar/index"
+  },
+  "navigationBarTitleText": "点击列表"
+}

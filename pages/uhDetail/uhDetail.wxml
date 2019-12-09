@@ -1,0 +1,103 @@
+<!-- 活动页 -->
+<!-- <navbar page-name="楼盘资料"></navbar>
+<view class="htop" style='height:{{navH}}px'></view> -->
+<view class="uhd" wx:if="{{show}}">
+  <view class="uhdli">
+    <label>所在片区</label>
+    <text wx:if="{{product.RegionName==null||product.RegionName==''}}">--</text>
+    <text wx:else>{{product.RegionName}}</text>
+  </view>
+  <view class="uhdli">
+    <label>楼盘地址</label>
+    <text>{{mainInfo.Address}}</text>
+  </view>  
+  <view class="uhdli">
+    <label>开发商</label>
+    <text>{{mainInfo.CompanyDev}}</text>
+  </view>
+  <view class="uhdli">
+    <label>楼盘状态</label>
+    <text>{{mainInfo.Status}}</text>
+  </view>
+  <view class="uhdli">
+    <label>参考均价</label>
+    <text wx:if="{{product.Aprice==null||product.Aprice==0}}">待定</text>
+    <text wx:else>{{product.Aprice}}元/㎡</text>
+  </view>
+  <view class="uhdli">
+    <label>最新开盘</label>
+    <text wx:if="{{mainInfo.DateOpenS==null}}">暂无</text>
+    <text wx:else>{{mainInfo.DateOpenS}}</text>
+  </view>
+  <view class="uhdli">
+    <label>物业类型</label>
+    <text>{{mainInfo.PropertyUsage}}</text>
+  </view>   
+  <view class="uhdli">
+    <label>建筑类别</label>
+    <text>{{mainInfo.BuildingType}}</text>
+  </view> 
+  <view class="uhdli">
+    <label>装修状态</label>
+    <text>{{mainInfo.Decoration}}</text>
+  </view> 
+  <view class="uhdli">
+    <label>车位数量</label>
+    <text wx:if="{{mainInfo.ParkingNum>0}}">{{mainInfo.ParkingNum}}个</text>
+    <text wx:else>待定</text>
+  </view> 
+  <view class="uhdli">
+    <label>容积率</label>
+    <text wx:if="{{mainInfo.DensityRate>0}}">{{mainInfo.DensityRate}}</text>
+    <text wx:else>待定</text>
+  </view> 
+  <view class="uhdli">
+    <label>绿化率</label>
+    <text wx:if="{{mainInfo.GreenRate>0}}">{{mainInfo.GreenRate}}</text>
+    <text wx:else>待定</text>
+  </view> 
+  <view class="uhdli">
+    <label>产权年限</label>
+    <text>{{mainInfo.UseYears}}年</text>
+  </view> 
+  <view class="uhdli">
+    <label>占地面积</label>
+    <text>{{mainInfo.LandSquare}}㎡</text>
+  </view> 
+  <view class="uhdli">
+    <label>建筑面积</label>
+    <text>{{mainInfo.Square}}㎡</text>
+  </view>
+  <view class="uhdli">
+    <label>物业公司</label>
+    <text>{{mainInfo.CompanyMgr}}</text>
+  </view>  
+  <view class="uhdli">
+    <label>管理费</label>
+    <text wx:if="{{mainInfo.MgrPrice>0}}">{{mainInfo.MgrPrice}}元/㎡/月</text>
+    <text wx:else>待定</text>
+  </view>
+  <view class="uhdli">
+    <label>预售许可证</label>
+    <text wx:if="{{mainInfo.SaleLicense!=null&&mainInfo.SaleLicense!=''}}">{{mainInfo.SaleLicense}}</text>
+    <text wx:else>暂无</text>
+  </view> 
+  <view class="uhdjs">
+    <view class="uhdt">项目介绍</view>
+    <view class="uhdc">
+      <rich-text nodes="{{mainInfo.EstateIntro}}"></rich-text>
+    </view>
+  </view>  
+  <view class="uhdjs">
+    <view class="uhdt">项目配套</view>
+    <view class="uhdc">
+      <rich-text nodes="{{mainInfo.PeripheralFacilities}}"></rich-text>
+    </view>
+  </view>  
+  <view class="uhdjs">
+    <view class="uhdt">交通状况</view>
+    <view class="uhdc">
+      <rich-text nodes="{{mainInfo.PeripheralTraffic}}"></rich-text>
+    </view>
+  </view>                                   
+</view>

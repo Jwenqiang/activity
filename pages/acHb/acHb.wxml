@@ -1,0 +1,8 @@
+<!-- <view class='btn' bindtap='getSharePoster'>生成海报</view> -->
+<view class="view-page">
+  <navbar page-name="生成海报"></navbar>
+  <view class="htop" style='height:{{navH}}px'></view>
+  <view class="page" style='height:calc(100vh - {{navH}}px)'>
+  <my-poster id="getPoster" avater="{{bgImg}}" codeimg="{{ewm}}" tx="{{tx}}"  phone="{{mobile}}" productname="{{name}}"></my-poster>
+  </view>
+</view>

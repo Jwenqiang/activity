@@ -1,0 +1,14 @@
+<navbar page-name="优购转一转"></navbar>
+<view class="htop" style='height:{{navH}}px'></view>
+<view class="page">
+  <view class="outer list" wx:for="{{clickList}}" wx:key="{{index}}" wx:if="{{clickList.length>0}}">
+    <image src="{{item.HeadImg}}" mode='aspectFill'></image>
+    <view class="listR">
+      <label>{{item.NickName}}</label>
+      <text>{{item.AddTime}}</text>
+    </view>
+  </view>
+    <view style='text-align:center;width:100%;line-height:80rpx;color:#ccc;font-size:22rpx;' wx:if="{{no&&clickList.length>0}}">
+      到底了~
+    </view>   
+</view>

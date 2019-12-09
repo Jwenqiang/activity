@@ -1,0 +1,60 @@
+<navbar wx:if="{{isMoney}}" page-name="奖金排行榜"></navbar>
+<navbar wx:else page-name="粉丝排行榜"></navbar>
+<view class="htop" style='height:{{navH}}px'></view>
+<view class="page">
+  <view class="top">
+    <image src="/img/moneyList.png"></image>
+  </view>
+  <view class="content">
+    <view class="title">
+      <image src="/img/moneyt.png"></image>
+      <text class="titleName" wx:if="{{isMoney}}">奖金榜</text>
+      <text class="titleName" wx:else>粉丝榜</text>
+    </view>
+    <view class="list">
+      <view class="listTop">
+        <label>名次</label>
+        <label class="uName">用户名</label>
+        <label wx:if="{{isMoney}}">奖金(元)</label>
+        <label wx:else>粉丝量</label>
+      </view>
+      <view class="userList" wx:for="{{moneyList}}" wx:key="{{index}}" wx:if="{{moneyList.length>0}}">
+        <label class="num {{index>2?'black':''}}">{{index+1}}</label>
+        <view class="label">
+        <!-- 第一名 -->
+        <block wx:if="{{index==0}}">
+        <image src="/img/pm1.png" class="hg"></image>
+        <image src="{{item.StartHeadImg}}" mode='aspectFill' class="tx bk"></image>
+        <label class="funsKing" wx:if="{{item.Settlement}}">
+          <image src="/img/funsKing.png"></image>
+        </label>
+        </block>
+        <block wx:elif="{{(index==1||index==2)&&isMoney}}">
+        <image src="/img/pm2.png" class="hg"></image>
+        <image src="{{item.StartHeadImg}}" mode='aspectFill' class="tx bk2"></image>
+        </block>
+        <block wx:else>
+        <image src="{{item.StartHeadImg}}" mode='aspectFill' class="tx"></image>
+        </block>                
+          <text>{{item.StartNickName}}</text>
+        </view>
+        <label wx:if="{{isMoney}}">{{item.Amount}}</label>
+        <label class="funs" data-activeid="{{item.RotateId}}" data-userid="{{item.StartUserId}}" bindtap="goUfriends" wx:else>{{item.UserFans}}</label>
+      </view>
+      <!-- <view class="userList">
+        <label class="num">2</label>
+        <view class="label">
+          <image src="/img/pm2.png" class="hg"></image>
+
+          <image src="/img/tx3.png" class="tx bk2"></image>
+          <text>名字2</text>
+        </view>
+        <label>350</label>
+      </view> -->
+      <!-- 无数据时 -->
+      <view wx:if="{{moneyList.length==0}}" style="text-align:center;padding-top:500rpx;background:url(https://hfugweb.centaline.com.cn/img/smallR/rotate/none.png) center no-repeat;background-size:320rpx;color:#999">
+        <text>暂无记录</text>
+      </view>        
+    </view>
+  </view>
+</view>

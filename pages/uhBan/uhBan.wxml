@@ -1,0 +1,21 @@
+<!-- 活动页 -->
+<!-- <navbar page-name="户型图详情"></navbar>
+<view class="htop" style='height:{{navH}}px'></view> -->
+<view class="uhb">
+    <view class='swiperC'>
+      <swiper bindchange="swiperChange" interval="5000" duration="300" circular="true" class='houseBan'>
+        <block wx:for="{{banList}}" wx:key="index">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" data-u="{{item}}"  mode='aspectFit' bindtap="changeBig"/>
+          </swiper-item>
+        </block>  
+      </swiper>
+      <view class="imageCount"><text>{{current+1}}/{{banList.length}}</text> </view>
+    </view>
+    <view class="uhbd">
+      <view class="uhbdt">{{hxObj.CountF}}室{{hxObj.CountT}}厅{{hxObj.CountW}}卫 <label class="has" wx:if="{{hxObj.AvilStatus===1}}">在售</label><label class="none" wx:else>售完</label></view>
+      <view class="uhbdc">建筑面积： <text wx:if="{{hxObj.Square==null}}">未知</text><text wx:else>{{hxObj.Square}}㎡</text> </view>
+      <view class="uhbdc">户型朝向： <text wx:if="{{hxObj.Facedesc==null}}">未知</text><text wx:else>{{hxObj.Facedesc}}</text></view>
+      <view class="uhbdc">户型信息： <text wx:if="{{hxObj.Description==null}}">暂无</text><text wx:else>{{hxObj.Descriptio}}</text> </view>
+    </view>
+</view>

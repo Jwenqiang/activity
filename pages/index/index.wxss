@@ -1,0 +1,71 @@
+@import "../active/active.wxss";
+page .page{background: #ff3c00;height: auto;box-sizing: border-box}
+.asl-top{height: 750rpx;background: #ff7100}
+.asl-content{padding: 40rpx 0 20rpx 82rpx;box-sizing: border-box;background: #ff3c00;}
+.asl-li{width: 584rpx;height: 160rpx;margin-bottom: 20rpx;position: relative;padding-top: 24rpx;box-sizing: border-box}
+.asl-l{width: 192rpx;height: 100%;box-sizing: border-box;text-align: center;float: left}
+image.asl-zj{width: 108rpx;height: 59rpx}
+image.asl-z{width: 62rpx;height: 71rpx;vertical-align: -20rpx}
+.asl-lp{font-size: 50rpx;color: #ff3c00;font-weight: bold;display: inline-block;line-height: 1;margin-right: 4rpx}
+.asl-m{width: 250rpx;float: left;text-align: center;color: #ff3c00;height: 100%;position: relative}
+.asl-mt{font-size: 28rpx;font-weight: bold;margin-bottom: 6rpx;position: relative;text-decoration: underline}
+.asl-adr{font-size: 22rpx;color: #f68063}
+.asl-adr text{font-size: 20rpx;margin-left: 4rpx}
+.asl-tip{
+  width: 100%;
+  text-align: center;
+  position:absolute;
+  bottom:18rpx;
+  font-weight: bold
+}
+.asl-r{width: 138rpx;height: 100rpx;float: left;text-align: center;font-size: 38rpx;box-sizing: border-box;color: #ff3836;font-weight: bold}
+.asl-r button{padding: 0;background: none;width: 100rpx;height: 100rpx;white-space: normal;display: inline-block;line-height: 1.4;color: #ff3836;font-size: 38rpx;font-weight: bold;margin: 4rpx 0 0 10rpx}
+
+.fixPhone {
+  text-align: center;
+  position: fixed;
+  bottom: 120rpx;
+  right: 40rpx;
+  width: 70rpx;
+  height: 70rpx;
+  line-height: 62rpx;
+  background: #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 4rpx solid #fff;
+  color: #76be34;
+  font-weight: bold;
+}
+
+.fixPhone .iconfont {
+  font-size: 40rpx;
+}
+
+button::after {
+  border: none;
+  content: none;
+}
+.gohome {
+  bottom: 220rpx;
+}
+.asl-mid{padding: 0 44rpx;background: #ff3c00;position: relative}
+.asl-sale{width: 610rpx;height: 172rpx;float: left;padding: 10rpx 0 0 180rpx; box-sizing: border-box;color: #f5fff7}
+button.aslm-btn{width: 166rpx;height: 165rpx;position: absolute;right: 44rpx;top: 6rpx;}
+
+.sale-name{color: #fff;font-size: 68rpx;font-weight: bold;width: 320rpx;text-align: center;margin-top: 20rpx;line-height: 1}
+.sale-name label{font-size: 22rpx;font-weight: 400}
+.bigf{font-size: 36rpx}
+.an-r{width: 90rpx;display: inline-block;font-size: 22rpx;line-height: 1}
+.sale-tip{width: 320rpx;text-align: center;font-size: 24rpx}
+.sale-tip label{font-weight: bold;font-size: 36rpx}
+.asl-djs{width: 100%;background: #ff3c00;text-align: center;position: relative;height: 96rpx}
+.asl-djs .time{bottom:0}
+.asl-djs .xjDate{color: #fdffff}
+.asl-djs .xjDate text{background: #fff;color: #333}
+
+.asl-title{height: 89rpx;line-height: 83rpx;border: 3rpx solid #fce8a7;width: 584rpx;box-sizing: border-box;font-size: 36rpx;color: #fdeab8;margin-bottom: 40rpx;border-radius: 8rpx}
+.asl-title label{width: 50%;height: 100%;text-align: center;display: inline-block}
+.asl-title label.on{background: #ffeae0;color: #f82747}
+.asl-role{color: #fff}
+.showHouse{height: 900rpx}
+.footBarU{top: 980rpx}

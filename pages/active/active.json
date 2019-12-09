@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navbar": "../../component/navbar/index"
+  },
+  "navigationBarTitleText": "活动详情",
+  "enablePullDownRefresh": true
+}

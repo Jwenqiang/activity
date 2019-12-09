@@ -1,0 +1,35 @@
+<wxs module="time">
+var toHide = function(array) {
+  var htime = array.substring(0, 16);
+  return htime;
+}
+module.exports.toHide = toHide;
+</wxs>
+<navbar page-name="客户预约"></navbar>
+<view class="htop" style='height:{{navH}}px;'></view>
+<view class="page">
+  <view class="list">
+    <view class="section" wx:for="{{list}}" wx:key="{{index}}" wx:if="{{list.length>0}}">
+      <view class="sect nohas"><label style="display:inline-block;float：left;">{{item.FullName}}</label><label style="display:inline-block;float:right;">{{item.Mobile}}<text class="iconfont icon-shouji" style="display:inline-block;margin-left:20rpx;color: #3176f3;" catchtap="call" data-phone="{{item.Mobile}}"></text></label></view>
+      <view class="secb">
+        <image src="{{item.MainImg}}"></image>
+        <view class='hifMsg'>
+          <text class="name">{{item.Title}}</text>
+          <view class='hifT'>
+            <label>人数:<text class="red">{{item.Number}}</text></label>
+            <label>时间:<text class="red">{{time.toHide(item.AddTime)}}</text></label>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view style='text-align:center;width:100%;line-height:80rpx;color:#ccc;font-size:22rpx;' wx:if="{{no}}">
+    到底了~
+  </view>
+  <!-- 无数据时 -->
+  <view wx:if="{{list.length==0&&load}}" style="text-align:center;padding-top:400rpx;background:url(https://hfugweb.centaline.com.cn/img/smallR/rotate/none.png) center bottom no-repeat;background-size:500rpx;color:#999">
+    <text>你还没有客户的预约记录哦~</text>
+  </view>    
+
+</view>

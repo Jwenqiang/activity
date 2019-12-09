@@ -1,0 +1,7 @@
+/* pages/friends/friends.wxss */
+.page{padding: 40rpx}
+.list{margin-bottom: 40rpx}
+.list image{width: 80rpx;height: 80rpx;border-radius: 50%;float: left;margin-right: 40rpx}
+.listR{width: 550rpx;float: left;height: 80rpx;line-height: 80rpx}
+.listR label{color: #000;font-weight: bold;display: block;float: left;width: 200rpx;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
+.listR text{color: #999;font-size: 24rpx;float: right}

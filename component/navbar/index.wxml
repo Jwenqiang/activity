@@ -1,0 +1,17 @@
+<!--components/navbar/index.wxml-->
+<cover-view class="navbar" style='height:{{navH}}px;background:{{pageColor}}'>
+  <cover-view class="navbar-action-wrap  {{showHome ? 'navbar-action-group' : ''}} row item-center" wx:if="{{showNav}}">
+    <block wx:if="{{showHome}}">
+    <cover-view class="navbar-action_item first" bindtap="navBack"><cover-image src="/img/back.png"></cover-image> </cover-view>
+    <cover-view class="line1"></cover-view>
+    <cover-view class="navbar-action_item" bindtap="toIndex" ><cover-image src="/img/index.png"></cover-image></cover-view>
+    </block>
+    <!-- <block wx:else>
+<cover-view class="navbar-action_item first" bindtap="navBack"></cover-view>
+    </block> -->
+    
+  </cover-view>
+  <cover-view class='navbar-title'>
+    {{pageName}}
+  </cover-view>
+</cover-view>

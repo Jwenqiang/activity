@@ -1,0 +1,81 @@
+<wxs module="phone">
+var toHide = function(array) {
+  var mphone = array.substring(0, 3) + '****' + array.substring(7);
+  return mphone;
+}
+module.exports.toHide = toHide;
+</wxs>
+<!-- <navbar page-name="个人资料"></navbar>
+<view class="htop" style='height:{{navH}}px'></view> -->
+<view class="container">
+<!-- 经纪人权限 -->
+  <view class='am-content' wx:if="{{role==5||role==4}}">
+    <view class='li'>
+      <label>头像<text style='font-weight:400;font-size:20rpx;color:#999'>（建议上传真人头像）</text></label>
+      <view class='outer' bindtap='setTx'>
+        <text class='iconfont icon-right' style='float:right;font-weight:400;font-size:24rpx;margin-left:10rpx;color:#ccc'></text>
+        <image src="{{uimg}}" wx:if="{{uimg!=''&&uimg!='null'}}" mode='aspectFill'></image>
+        <image src='../../img/tx.png'  wx:if="{{uimg=='null'||uimg==''}}"></image>   
+      </view>
+    </view>
+    <view class='li'>
+      <label>昵称</label>
+      <view class='outer uName'>
+        <text class='iconfont icon-right' style='float:right;font-weight:400;font-size:24rpx;margin-left:10rpx;color:#ccc'></text>
+        <input type='text' value='{{name}}' bindblur='setName' maxlength="8"></input>
+      </view>
+    </view>   
+    <view class='hr10'></view>    
+    <view class='li'>
+      <label>手机号</label>
+      <text>{{phone.toHide(mobile)}}</text>
+    </view>   
+    <view class='hr10'></view>
+    <view class='li'>
+      <label>微信二维码</label>
+      <view class='outer uName' bindtap='goEwm'>
+        <text class='iconfont icon-right' style='float:right;font-weight:400;font-size:24rpx;margin-left:10rpx;color:#ccc'></text>
+        <text style='font-weight:400;color:#ccc' wx:if="{{wxEwm==''||wxEwm==null}}">上传微信二维码，客户主动加微信</text>      
+        <text style='font-weight:400;color:#ccc' wx:else>已上传</text>      
+      </view>
+    </view> 
+    <view class='hr10'></view>   
+    <view class='li' wx:if="{{company!=''&&company!=null}}">
+      <label>所在公司</label>
+      <text>{{company}}</text>   
+    </view>   
+    <view class='li' wx:if="{{store!=''&&store!=null}}">
+      <label>所在门店</label>
+      <text>{{store}}</text>   
+    </view> 
+    <view class='li' wx:if="{{job!=''&&job!=null}}">
+      <label>岗位名称</label>
+      <text>{{job}}</text>   
+    </view> 
+    <view class='hr10'></view>  
+             
+  </view> 
+<!-- 普通用户权限 -->
+  <view class='am-content' wx:else>
+    <view class='li'>
+      <label>头像</label>
+      <view class='outer' bindtap='setTx'>
+        <text class='iconfont icon-right' style='float:right;font-weight:400;font-size:24rpx;margin-left:10rpx;color:#ccc'></text>
+        <image src="{{uimg}}" wx:if="{{uimg!=''&&uimg!='null'}}" mode='aspectFill'></image>
+        <image src='../../img/tx.png'  wx:if="{{uimg=='null'||uimg==''}}"></image>   
+      </view>
+    </view>
+    <view class='li'>
+      <label>昵称</label>
+      <view class='outer uName'>
+        <text class='iconfont icon-right' style='float:right;font-weight:400;font-size:24rpx;margin-left:10rpx;color:#ccc'></text>
+        <input type='text' value='{{name}}' bindblur='setName'></input>
+      </view>
+    </view>   
+    <view class='li'>
+      <label>手机号</label>
+      <text>{{phone.toHide(mobile)}}</text>
+    </view>   
+  </view>   
+<button class="exit" bindtap='exit'>退出登录</button> 
+</view>

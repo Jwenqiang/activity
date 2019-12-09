@@ -1,0 +1,18 @@
+<navbar page-name="活动详情"></navbar>
+<view class="htop" style='height:{{navH}}px'></view>
+<view class="page">
+  <view class="top">
+      <view class='outer hInp'>
+         <label class="red" style="float:left">*</label><text>您的姓名</text>
+          <input type='text' placeholder='请填写您的姓名' style='float:right' bindblur='setMsg' data-t="name" placeholder-class="inputTip" value=""></input>
+      </view>
+      <view class='outer hInp'>
+         <label class="red" style="float:left">*</label><text>手机号</text>
+          <input type='digit' disabled style='float:right' value=''placeholder-class="inputTip"></input>
+      </view>  
+      <view class='outer hInp'>
+         <label class="red" style="float:left">*</label><text>所在公司</text>
+          <input type='text'  placeholder='请填写您所在公司' style='float:right'  bindblur='setMsg' data-t="gs" placeholder-class="inputTip" value=""></input>
+      </view>     
+  </view>
+</view>

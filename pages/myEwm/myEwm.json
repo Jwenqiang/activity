@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navbar": "../../component/navbar/index"
+  },
+  "navigationBarTitleText": "上传微信二维码"
+}

@@ -1,0 +1,15 @@
+<navbar page-name="我的客服"></navbar>
+<view class="htop" style='height:{{navH}}px'></view>
+<view class="container">
+  <view class='kfT'>
+    <image src='../../img/tx1.jpg'></image>
+    <view style='color:#666;margin-bottom:20rpx;'>您好！</view>
+    <view style='color:#666;margin-bottom:20rpx;'>我是客服小美，很高兴为您服务！</view>
+    <!-- <button send-message-title="分享标题" send-message-img="/img/tx3.png" show-message-card="true" send-message-path="../index/index?id={{id}}" open-type='contact'>在线咨询</button> -->
+    <button open-type='contact'>在线咨询</button>    
+  </view>
+  <view class='kfM'>
+    <text>如需电话联系，请点击拨打</text>
+    <view style='font-size:38rpx;font-weight:bold;margin-top:20rpx;' bindtap='callPhone' data-p="4000-666-030">4000-666-030</view>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+.container{padding: 0 0 400rpx;}
+  .am-content{width: 100%;box-sizing: border-box}
+ .am-content .li{padding: 0 40rpx;border-bottom: 0.8px solid #f5f5f7;height: 120rpx;line-height: 120rpx;width: 100%;box-sizing: border-box}
+  .am-content .li image{width: 80rpx;height: 80rpx;float: right;margin-top: 20rpx;border-radius: 50%}
+ .am-content .li label{float: left;display: block;height: 120rpx;line-height: 120rpx;}
+ .li text{float: right;font-weight: bold;color: #666}
+ button.exit{width: 510rpx;height: 80rpx;display: block;margin: 100rpx auto;  background: #fe483a;color: #fff;font-size: 32rpx;}
+ .uName input{width: 400rpx;float: right;line-height: 120rpx;height: 120rpx;text-align: right;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-weight:bold;color:#666;}
+ .li .rz label{height: 40rpx;width: 90rpx;border: 1px solid #ff7b94;border-radius: 3px;line-height: 40rpx;margin-top: 40rpx;font-size: 20rpx;text-align: center;margin-left: 10rpx;color: #ff7b94}
+ .li .rz label.noR{border: 1px solid #ccc;color: #ccc}
+  .li .rz label.rzing{background: #ff7b94;color: #fff}
+  .uMsg{width: 100%;height: 300rpx;}
+  .uMsg textarea{width: 100%;height: 100%;padding: 20rpx 40rpx;border: 1px solid #f5f5f7;box-sizing: border-box;z-index: 2}
+
+  .show{position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 95}
+.bj{width: 100%;height: 100%;background: #000;opacity: 0.5;z-index: 96}
+.showMsg{position: fixed;bottom: 0;left: 0;height: 500rpx;width: 750rpx;background: #fff;z-index: 97}
+
+.showT{height: 80rpx;line-height: 80rpx;border-bottom: 1px solid #ededed}
+.showT label,.showT text{display: inline-block;height: 80rpx;text-align: center}
+.showT label{float: left;width:120rpx;text-align: center;font-weight: bold}
+.showT .confim{color: #5c85ff}
+.showT text{float: left;width:510rpx;text-align: center}
+.hsque{margin: 80rpx 0}
+.hsque text{display: inline-block;width: 130rpx;height: 60rpx;margin-left: 46rpx;background: #f3f5f7;text-align: center;line-height: 60rpx;margin-bottom: 40rpx;border-radius: 3px;color: #999;font-size: 24rpx;font-weight: bold}
+/* .hsque text:nth-of-type(4n+1){margin-left: 0} */
+.hsque text.on{background: #fe7269;color: #fff}

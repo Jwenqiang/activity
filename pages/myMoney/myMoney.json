@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "奖金列表",
+  "usingComponents": {
+    "navbar": "../../component/navbar/index"
+  }
+}

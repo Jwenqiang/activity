@@ -1,0 +1,69 @@
+<wxs module="phone">
+var toHide = function(array) {
+  var mphone = array.substring(0, 3) + '****' + array.substring(7);
+  return mphone;
+}
+module.exports.toHide = toHide;
+</wxs>
+<view class="page">
+  <view class="top">
+    <image src="/img/mbj.png" class="mbj"></image>
+    <view class="msg">
+      <view class="outer topA" wx:if="{{isLogin}}">
+        <label class="tx"><image src="/img/tx3.png" wx:if="{{userTx==''||userTx==null}}"></image><image src="{{userTx}}"  mode='aspectFill' wx:else></image></label>
+        <view class="name">
+          <label wx:if="{{userName==''||userName==null}}">转转用户</label>
+          <label wx:else><text class="nick">{{userName}}</text><image src="/img/icon-rz.png" class="rz" wx:if="{{isJjr==5}}"></image></label>
+          <text wx:if="{{hasNum}}">{{phone.toHide(mobile)}}</text>
+          <button class="edit editP" bindtap="getCode"  open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber" wx:else>点击授权手机号</button>
+        </view>
+        <view class="edit" bindtap="goMyself" wx:if="{{hasNum}}">
+          <text class='iconfont icon-bianji'></text>
+          编辑资料
+        </view>
+        <button class="edit" bindtap="getCode"  open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber" wx:else>
+          <text class='iconfont icon-bianji'></text>
+          编辑资料
+        </button>        
+      </view>
+      <view class="outer topA" wx:else>
+        <label class="tx"><image src="/img/tx3.png"></image></label>
+        <view class="name">
+          <button bindtap="getCode"  open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber" class="login">登录</button>
+        </view>
+      </view>  
+    </view>
+  </view>
+  <view class="saleList" wx:if="{{hasNum}}">
+
+    <view class="outer asl-li" wx:for="{{list}}" wx:key="{{item.Id}}" style="background:url('https://hfugweb.centaline.com.cn/img/smallR/discount/alist.png') left top no-repeat;background-size:100%">
+      <view class="asl-l">
+      <block wx:if="{{item.DiscountType==1}}">
+      <view style="height:100%;padding:0 20rpx">
+        <image src="../../img/asl-zj.png" class="asl-zj"></image>
+        <text class="asl-lp">{{item.DiscountContent}}万</text>
+      </view>   
+      </block> 
+      <block wx:if="{{item.DiscountType==2}}">
+      <view style="height:100%;line-height:140rpx">
+        <text class="asl-lp">{{item.DiscountContent}}</text>
+        <image src="../../img/asl-z.png" class="asl-z"></image>   
+      </view>       
+      </block>         
+      </view>
+      <view class="asl-m">
+        <view class="asl-mt">{{item.ProjectName}}</view>
+        <view class="asl-adr">{{item.Address}}<text class="iconfont icon-location"></text></view>
+        <view class="asl-tip">买房津贴券</view>
+      </view>
+      <view class="asl-r">
+          <button>
+            马上使用
+          </button>  
+      </view>
+    </view>
+
+
+  </view>  
+
+</view>

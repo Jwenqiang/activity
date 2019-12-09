@@ -1,0 +1,21 @@
+<navbar page-name="我的二维码"></navbar>
+<view class="htop" style='height:{{navH}}px'></view>
+<view class='page'>
+  <view class='tip'>
+    <text>为方便客户联系您</text>
+    <text>建议上传您的微信二维码</text>
+  </view>
+  <view class='upload'>
+    <label wx:if="{{fmPic==''||fmPic==null}}" bindtap='selectPic'>
+      <view class='add'>微信二维码<text style='display:block;height:40rpx'>+</text></view> 
+    </label>  
+    <label wx:else>
+      <image src='{{fmPic}}' mode='aspectFill' bindtap="handleImagePreview"></image>
+      <text class='iconfont icon-guanbi' bindtap="removeImage"></text>
+    </label>
+  </view>
+  <view class='btn' wx:if="{{show}}">
+    <button bindtap='saveMsg'>保存</button>  
+  </view>
+
+</view>

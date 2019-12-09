@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 停止位置:<input value='{{luckPosition}}' style="width:100%;text-align:center" bindinput='input' type='number'></input> -->
+  <view class='frame_view' wx:if="{{isHas==false}}" :style="">
+    <view class="top">
+      <!-- <view class="h3">活动即将开始</view>
+      <view>-正在为您抽取最高奖金资格-</view> -->
+      <image src="/img/bonus.png" mode="widthFix"></image>
+    </view>
+    <view class="frame_list">
+      <view class='frame_row'>
+        <view class='frame_item' style='opacity:{{color[0]}}'><label><text>{{money[0]}}</text>元</label>最高可获得</view>
+        <view class='frame_item' style='opacity:{{color[1]}}'><label><text>{{money[1]}}</text>元</label>最高可获得</view>
+        <view class='frame_item' style='opacity:{{color[2]}}'><label><text>{{money[2]}}</text>元</label>最高可获得</view>
+      </view>
+      <view class='frame_row'>
+        <view class='frame_item' style='opacity:{{color[5]}}'><label><text>{{money[5]}}</text>元</label>最高可获得</view>
+        <view class='frame_item' style='opacity:{{color[4]}}'><label><text>{{money[4]}}</text>元</label>最高可获得</view>
+        <view class='frame_item' style='opacity:{{color[3]}}'><label><text>{{money[3]}}</text>元</label>最高可获得</view>
+      </view>
+    </view>
+    <view class="tip">-正在为您抽取最高奖金资格-</view>
+  </view>
+  <view class="bonus" wx:else>
+    <view class="h3">恭喜您</view>
+    <view>抽取：最高可获得<text class="red">{{money[luckPosition]}}</text>元奖金资格</view>
+    <button>确定</button>
+  </view>
+</view>
+
+<!-- 弹窗 -->
+<view class="show" wx:if="{{show}}">
+  <view class="bj"></view>
+  <view class="showMsg" style="background:url('https://hfugweb.centaline.com.cn/img/smallR/rotate/sq.png') center no-repeat;background-size:100%">
+    <view class="title">转一转</view>
+    <text class="show_tip">- 买房卖房、赚钱拓客样样不误 -</text>
+    <view class="show_rect">
+      <view class="sbj"></view>
+      <view class="show_info">
+        <label>小程序即将申请</label>
+        <label>使用您的公开信息（头像、昵称等）</label>      
+      </view>
+    </view>
+    <button class="show_btn"  open-type="getUserInfo" bindgetuserinfo	="getUserInfo">进入小程序</button>
+  </view>
+</view>

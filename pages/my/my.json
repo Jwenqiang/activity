@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navbar": "../../component/navbar/index"
+  },
+  "navigationBarTitleText": "个人中心",
+  "enablePullDownRefresh": false
+}

@@ -1,0 +1,6 @@
+@import "../active/active.wxss";
+.hInp{border-bottom: 1px solid #f5f5f7;padding: 20rpx 40rpx;font-size: 28rpx;position: relative}
+.hInp label{display: block;float: left;line-height: 60rpx}
+.hInp text{display: inline-block;width: 180rpx;float: left;height: 60rpx;line-height: 60rpx;font-weight: bold}
+.hInp input{height: 60rpx;line-height: 60rpx;width: 430rpx;float: left;text-align: right;font-size: 28rpx;color: #333;font-weight: bold}
+.hInp text.iconfont{width: 40rpx;display: inline-block;float: right;color: #999;font-weight: 400;font-size: 24rpx;text-align: right}

@@ -1,0 +1,5 @@
+.uhdli{width: 100%;height: 100rpx;line-height: 100rpx;font-size: 28rpx;color: #999;border-bottom: 1px solid #dedede;padding: 0 20rpx;box-sizing: border-box}
+.uhdli text{color: #333;font-weight: bold;float: right;display: inline-block;max-width: 80%;white-space: nowrap;overflow: hidden;text-overflow: elispsis}
+.uhdjs{padding: 40rpx 20rpx;border-bottom: 1px solid #ccc}
+.uhdt{font-size: 32rpx;font-weight: bold;color: #333}
+.uhdc{margin-top: 20rpx;color: #666}
