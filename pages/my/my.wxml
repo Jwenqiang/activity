@@ -40,7 +40,7 @@ module.exports.toHide = toHide;
     <view class="outer asl-li" wx:if="{{item.UseState==2}}">
       <view class="asl-l ty" style="background: url('https://hfugweb.centaline.com.cn/img/smallR/discount/mty0.png') left top no-repeat;background-size:100%">
         <view>￥<label>{{item.DiscountContent}}</label></view>
-        <text>购房通用卷</text>         
+        <text>购房通用券</text>         
       </view>
       <view class="asl-m tym">
         <view class="tymName">{{item.DiscountTitle}}<text style="font-size:24rpx;color:#f82747">(券码:{{item.DiscountCode}})</text></view>
@@ -53,7 +53,7 @@ module.exports.toHide = toHide;
     <view class="outer asl-li" wx:if="{{item.UseState==1}}">
       <view class="asl-l ty" style="background: url('https://hfugweb.centaline.com.cn/img/smallR/discount/mty1.png') left top no-repeat;background-size:100%">
         <view>￥<label>{{item.DiscountContent}}</label></view>
-        <text>购房通用卷</text>         
+        <text>购房通用券</text>         
       </view>
       <view class="asl-m tym">
         <view class="tymName">{{item.DiscountTitle}}<text style="font-size:22rpx;color:#f82747">(券码:{{item.DiscountCode}})</text></view>
@@ -66,7 +66,7 @@ module.exports.toHide = toHide;
     <view class="outer asl-li" wx:if="{{item.UseState==3}}">
       <view class="asl-l ty" style="background: url('https://hfugweb.centaline.com.cn/img/smallR/discount/mty0.png') left top no-repeat;background-size:100%">
         <view>￥<label>{{item.DiscountContent}}</label></view>
-        <text>购房通用卷</text>         
+        <text>购房通用券</text>         
       </view>
       <view class="asl-m tym">
         <view class="tymName">{{item.DiscountTitle}}<text style="font-size:22rpx;color:#f82747">(券码:{{item.DiscountCode}})</text></view>

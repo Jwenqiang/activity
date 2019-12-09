@@ -73,21 +73,21 @@ Page({
     //     })
     //   }
     // })
-    wx.getStorage({
-      key: 'userInfo',
-      success: function (res) {
-        if (res.data.NickName != '' && res.data.NickName != null) {
-          that.setData({
-            utoken: res.data.Token,
-            mobile: res.data.Mobile,
-            bmPhone: res.data.Mobile,
-          })
-        }
-      },
-      fail:function(){
-        that.getCode();
-      }
-    })
+    // wx.getStorage({
+    //   key: 'userInfo',
+    //   success: function (res) {
+    //     if (res.data.NickName != '' && res.data.NickName != null) {
+    //       that.setData({
+    //         utoken: res.data.Token,
+    //         mobile: res.data.Mobile,
+    //         bmPhone: res.data.Mobile,
+    //       })
+    //     }
+    //   },
+    //   fail:function(){
+    //     that.getCode();
+    //   }
+    // })
     
   },
 
@@ -108,7 +108,23 @@ Page({
       this.getTabBar().setData({
         selected: 0
       })
-    } 
+    }
+    var that=this;
+    wx.getStorage({
+      key: 'userInfo',
+      success: function (res) {
+        if (res.data.NickName != '' && res.data.NickName != null) {
+          that.setData({
+            utoken: res.data.Token,
+            mobile: res.data.Mobile,
+            bmPhone: res.data.Mobile,
+          })
+        }
+      },
+      fail: function () {
+        that.getCode();
+      }
+    })     
   },
 
   /**
