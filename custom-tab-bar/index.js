@@ -13,7 +13,7 @@ Component({
       pagePath: "/pages/index/index",
       iconPath: "/img/zyz.png",
       selectedIconPath: "/img/zyz1.png",
-      text: "优惠卷"
+      text: "优惠券"
     }, {
         pagePath: "/pages/my/my",
         iconPath: "/img/wd.png",

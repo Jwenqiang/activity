@@ -25,8 +25,8 @@
   </view>
   <view class="asl-content">
     <view class="asl-title">
-      <label class="{{tab==0?'on':''}}" bindtap="changeTab" data-t="0">更多优惠</label>
-      <label class="{{tab==1?'on':''}}" bindtap="changeTab" data-t="1">活动规则</label>
+      <label class="{{tab==0?'on':''}}" bindtap="changeTab" data-t="0">更多优惠<text class="iconfont icon-down1" wx:if="{{tab==0}}"></text></label>
+      <label class="{{tab==1?'on':''}}" bindtap="changeTab" data-t="1">活动规则<text class="iconfont icon-down1" wx:if="{{tab==1}}"></text></label>
     </view>
 <view class="asl-a" wx:if="{{tab==0}}">    
     <view class="outer asl-li" wx:for="{{list}}" wx:key="{{item.Id}}" data-j="yes" data-p="{{item.Project}}" bindtap="showHouse" style="background:url('https://hfugweb.centaline.com.cn/img/smallR/discount/alist.png') left top no-repeat;background-size:100%" wx:if="{{index<idxNum}}">

@@ -14,7 +14,7 @@ Page({
     activeId: "",
     mobile: "",
     bmPhone: "",
-    list: ['1','2','3'],
+    list: [],
     showHouseInfo: false,
     uhouse: "",
     current: 0,

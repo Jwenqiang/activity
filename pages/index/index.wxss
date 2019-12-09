@@ -1,5 +1,5 @@
 @import "../active/active.wxss";
-page .page{background: #ff3c00;height: auto;box-sizing: border-box}
+page .page{background: #ff3c00;height: auto;box-sizing: border-box;padding-bottom: 120rpx}
 .asl-top{height: 750rpx;background: #ff7100}
 .asl-content{padding: 40rpx 0 20rpx 82rpx;box-sizing: border-box;background: #ff3c00;}
 .asl-li{width: 584rpx;height: 160rpx;margin-bottom: 20rpx;position: relative;padding-top: 24rpx;box-sizing: border-box}
@@ -63,8 +63,9 @@ button.aslm-btn{width: 166rpx;height: 165rpx;position: absolute;right: 44rpx;top
 .asl-djs .xjDate{color: #fdffff}
 .asl-djs .xjDate text{background: #fff;color: #333}
 
-.asl-title{height: 89rpx;line-height: 83rpx;border: 3rpx solid #fce8a7;width: 584rpx;box-sizing: border-box;font-size: 36rpx;color: #fdeab8;margin-bottom: 40rpx;border-radius: 8rpx}
-.asl-title label{width: 50%;height: 100%;text-align: center;display: inline-block}
+.asl-title{height: 89rpx;border: 3rpx solid #fce8a7;width: 584rpx;box-sizing: border-box;font-size: 36rpx;color: #fdeab8;margin-bottom: 40rpx;border-radius: 8rpx}
+.asl-title label{width: 50%;height: 100%;line-height: 80rpx;text-align: center;display: inline-block;position: relative}
+.asl-title label text{position: absolute;bottom:-30rpx;left: 45%;font-size: 24rpx}
 .asl-title label.on{background: #ffeae0;color: #f82747}
 .asl-role{color: #fff}
 .showHouse{height: 900rpx}
