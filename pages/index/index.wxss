@@ -26,7 +26,7 @@ image.asl-z{width: 62rpx;height: 71rpx;vertical-align: -20rpx}
   font-weight: bold
 }
 .asl-r{width: 138rpx;height: 100rpx;float: left;text-align: center;font-size: 38rpx;box-sizing: border-box;color: #ff3836;font-weight: bold}
-.asl-r button{padding: 0;background: none;width: 100rpx;height: 100rpx;white-space: normal;display: inline-block;line-height: 1.4;color: #ff3836;font-size: 38rpx;font-weight: bold;margin: 4rpx 0 0 10rpx}
+.asl-r button{padding: 4rpx 20rpx 0 32rpx;background: none;width: 138rpx;height: 140rpx;white-space: normal;display: inline-block;line-height: 1.4;color: #ff3836;font-size: 38rpx;font-weight: bold;text-align: center}
 
 .fixPhone {
   text-align: center;
@@ -74,6 +74,6 @@ button.aslm-btn{width: 166rpx;height: 165rpx;position: absolute;right: 44rpx;top
 .asl-title label{width: 50%;height: 100%;line-height: 80rpx;text-align: center;display: inline-block;position: relative}
 .asl-title label text{position: absolute;bottom:-30rpx;left: 45%;font-size: 24rpx}
 .asl-title label.on{background: #ffeae0;color: #f82747}
-.asl-role{color: #fff}
+.asl-role{color: #333;padding: 40rpx;line-height: 1.6; margin-right: 82rpx; background: #ffeae0;box-sizing: border-box}
 .showHouse{height: 900rpx}
 .footBarU{top: 980rpx}

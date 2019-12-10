@@ -53,12 +53,8 @@
         <view class="asl-tip">买房津贴券</view>
       </view>
       <view class="asl-r">
-          <button open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber1" catchtap="getCode" data-aid="{{item.Id}}" data-id="{{item.ProjectId}}" data-t="{{item.DiscountType}}" data-c="{{item.DiscountContent}}" wx:if="{{mobile==''||mobile==null}}">
-            立即领取
-          </button>
-          <button data-aid="{{item.Id}}" data-id="{{item.ProjectId}}" data-t="{{item.DiscountType}}" data-c="{{item.DiscountContent}}" catchtap="getSale" wx:else>
-            立即领取
-          </button>  
+          <button open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber1" catchtap="getCode" data-aid="{{item.Id}}" data-id="{{item.ProjectId}}" data-t="{{item.DiscountType}}" data-c="{{item.DiscountContent}}" wx:if="{{mobile==''||mobile==null}}">立即领取</button>
+          <button data-aid="{{item.Id}}" data-id="{{item.ProjectId}}" data-t="{{item.DiscountType}}" data-c="{{item.DiscountContent}}" catchtap="getSale" wx:else>立即领取</button>  
       </view>
     </view>
     <view style='text-align:center;width:584rpx;line-height:100rpx;color:#fff;font-size:22rpx;' wx:if="{{no&&list.length>0}}">
@@ -245,7 +241,7 @@
         <image src="../../img/i-asale.png" class="isale"></image>
         <view class="h2 saleH2">成功领取楼盘优惠</view>
         <view class="saleMsg">
-         活动即将到期,请尽快与现场工作人员或拨打下方客服电话核对<text style="color:#ff0000">券码</text>(请于“个人中心-优惠券”查看)
+         请于“我的”中查看优惠券，优惠名额、时间有限，请尽快使用！购房出示<text style="color:#ff0000">券码</text>或<text style="color:#ff0000">优惠券</text>立享优惠 (券码请于“个人中心-优惠券”查看)
 买房咨询热线： 4000 666 030 转 295
         </view>
         <view class="btnSale" bindtap='showSale'>我知道了</view>
