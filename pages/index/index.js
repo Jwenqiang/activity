@@ -459,7 +459,7 @@ Page({
               })
               // 授权手机后直接领取优惠
               wx.request({
-                url: 'https://spapi.centaline.com.cn/SPXinFangApi/Rotate/AddRotateProjectDiscount',
+                url: 'https://spapi.centaline.com.cn/SPXinFangApi/Discount/AddDiscountReceive',
                 method: "post",
                 data: {
                   DiscountId: activeId,
