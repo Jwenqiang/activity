@@ -7,13 +7,13 @@
   </view>
   <view class="outer asl-mid">
     <view class="asl-sale" style="background:url('https://hfugweb.centaline.com.cn/img/smallR/discount/asale.png') left top no-repeat;background-size:100%">
-      <view class="sale-name"><label style="font-size:30rpx">￥</label>{{maxNum}}<label class="an-r"><text class="bigf">购房</text>抵用券</label></view>
+      <view class="sale-name"><label style="font-size:30rpx">￥</label>{{maxNum}}<label class="an-r"><text class="bigf">购房</text>现金券</label></view>
       <view class="sale-tip">最高可抽取到<label>{{bzHouse.MaxReward}}万元</label></view>
     </view>
     <!-- 未授权状态 -->
-    <button class="aslm-btn" style="background:url('https://hfugweb.centaline.com.cn/img/smallR/discount/abtn.png') left top no-repeat;background-size:100%" open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber1" catchtap="getCode" data-aid="{{bzHouse.Id}}" data-id="0" data-t="0" data-c="{{maxNum}}" wx:if="{{mobile==''||mobile==null}}">立即领取</button>
+    <button class="aslm-btn" style="background:url('https://hfugweb.centaline.com.cn/img/smallR/discount/abtn.png') left top no-repeat;background-size:100%" open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber1" catchtap="getCode" data-aid="{{bzHouse.Id}}" data-id="0" data-t="0" data-c="{{maxNum}}" wx:if="{{mobile==''||mobile==null}}" disabled="{{isFinish}}">立即领取</button>
     <!-- 已授权状态 -->
-    <button class="aslm-btn" style="background:url('https://hfugweb.centaline.com.cn/img/smallR/discount/abtn.png') left top no-repeat;background-size:100%" data-aid="{{bzHouse.Id}}" data-id="0" data-t="0" data-c="{{maxNum}}" catchtap="getSale" wx:else>立即领取</button>
+    <button class="aslm-btn" style="background:url('https://hfugweb.centaline.com.cn/img/smallR/discount/abtn.png') left top no-repeat;background-size:100%" data-aid="{{bzHouse.Id}}" data-id="0" data-t="0" data-c="{{maxNum}}" catchtap="getSale" disabled="{{isFinish}}" wx:else>立即领取</button>
   </view>
   <view class="asl-djs">
        <view class="time">

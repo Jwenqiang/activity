@@ -33,7 +33,8 @@ Page({
     maxNum:"",
     hasEwm:false,
     idxNum:5,
-    no:false
+    no:false,
+    isFinish:true
   },
 
   /**
@@ -56,7 +57,8 @@ Page({
       setTimeout(function () {
         clearInterval(n);
         that.setData({
-          maxNum: that.data.numR[max]
+          maxNum: that.data.numR[max],
+          isFinish:false
         })
       }, 2000)       
       // 设计定时器
@@ -148,7 +150,10 @@ Page({
     var that = this;
     wx.stopPullDownRefresh();
     //显示动画
-    // wx.showNavigationBarLoading();    
+    // wx.showNavigationBarLoading();  
+    that.setData({
+      isFinish:true
+    })  
     that.onLoad()
   },
 
@@ -457,6 +462,7 @@ Page({
               wx.showLoading({
                 title: '领取中',
               })
+              
               // 授权手机后直接领取优惠
               wx.request({
                 url: 'https://spapi.centaline.com.cn/SPXinFangApi/Discount/AddDiscountReceive',

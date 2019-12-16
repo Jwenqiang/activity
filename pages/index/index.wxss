@@ -77,3 +77,4 @@ button.aslm-btn{width: 166rpx;height: 165rpx;position: absolute;right: 44rpx;top
 .asl-role{color: #333;padding: 40rpx;line-height: 1.6; margin-right: 82rpx; background: #ffeae0;box-sizing: border-box}
 .showHouse{height: 900rpx;-webkit-overflow-scrolling: touch}
 .footBarU{top: 980rpx}
+/* button.aslm-btn[disabled]{color: #c2c2c2} */
